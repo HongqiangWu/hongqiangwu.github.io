@@ -6,7 +6,7 @@
   <link href="http://blog.too.ink/atom.xml" rel="self"/>
   
   <link href="http://blog.too.ink/"/>
-  <updated>2020-10-24T06:38:21.711Z</updated>
+  <updated>2020-10-24T06:47:05.435Z</updated>
   <id>http://blog.too.ink/</id>
   
   <author>
@@ -17,20 +17,16 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>书签</title>
+    <title>bookmarks</title>
     <link href="http://blog.too.ink/2020/10/24/bookmarks/"/>
     <id>http://blog.too.ink/2020/10/24/bookmarks/</id>
     <published>2020-10-24T06:36:23.000Z</published>
-    <updated>2020-10-24T06:38:21.711Z</updated>
+    <updated>2020-10-24T06:47:05.435Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="邬的书签"><a href="#邬的书签" class="headerlink" title="邬的书签"></a>邬的书签</h1><p>[TOC]</p><h2 id="1-深度学习"><a href="#1-深度学习" class="headerlink" title="1.深度学习"></a>1.深度学习</h2><h2 id="2-Verilog"><a href="#2-Verilog" class="headerlink" title="2.Verilog"></a>2.Verilog</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h2><h2 id="Verilog"><a href="#Verilog" class="headerlink" title="Verilog"></a>Verilog</h2>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h1 id=&quot;邬的书签&quot;&gt;&lt;a href=&quot;#邬的书签&quot; class=&quot;headerlink&quot; title=&quot;邬的书签&quot;&gt;&lt;/a&gt;邬的书签&lt;/h1&gt;&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h2 id=&quot;1-深度学习&quot;&gt;&lt;a href=&quot;#1-深度学习&quot; class=&quot;headerlink&quot;</summary>
-      
+    <summary type="html">the page of bookmarks.(url)</summary>
     
     
     
@@ -42,16 +38,12 @@
     <link href="http://blog.too.ink/2020/10/24/article-writing/"/>
     <id>http://blog.too.ink/2020/10/24/article-writing/</id>
     <published>2020-10-24T06:22:43.000Z</published>
-    <updated>2020-10-24T06:40:35.049Z</updated>
+    <updated>2020-10-24T06:47:55.331Z</updated>
     
     <content type="html"><![CDATA[<h1 id="如何新建一篇文章"><a href="#如何新建一篇文章" class="headerlink" title="如何新建一篇文章"></a>如何新建一篇文章</h1><p>1.在博客文件夹目录下鼠标右键，点击Git Bash Here</p><p>2.输入代码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new article</span><br></pre></td></tr></table></figure><p>回车新建文章，生成的.md文件在/source/_post/目录下</p><p>3.</p><p>清除之前的页面</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure><p>生成新的页面</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure><p>部署新的页面</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>打开本地服务器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>4.文章Front Matter</p><div class="table-container"><table><thead><tr><th>属性</th><th>含义</th></tr></thead><tbody><tr><td>title</td><td>文章的标题</td></tr><tr><td>date</td><td>文章的日期</td></tr><tr><td>categories</td><td>文章的所属类别，只有一个，填写多个时默认第一个</td></tr><tr><td>tags</td><td>标签，可以有多个</td></tr><tr><td>description</td><td>首页缩略显示内容</td></tr><tr><td>comments</td><td>是否支持评论</td></tr></tbody></table></div>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h1 id=&quot;如何新建一篇文章&quot;&gt;&lt;a href=&quot;#如何新建一篇文章&quot; class=&quot;headerlink&quot; title=&quot;如何新建一篇文章&quot;&gt;&lt;/a&gt;如何新建一篇文章&lt;/h1&gt;&lt;p&gt;1.在博客文件夹目录下鼠标右键，点击Git Bash Here&lt;/p&gt;
-&lt;p&gt;2.输入代码&lt;</summary>
-      
+    <summary type="html">新建文章的一些简单指令代码。</summary>
     
     
     

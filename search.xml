@@ -62,10 +62,9 @@
       </categories>
   </entry>
   <entry>
-    <title>书签</title>
+    <title>bookmarks</title>
     <url>/2020/10/24/bookmarks/</url>
-    <content><![CDATA[<h1 id="邬的书签"><a href="#邬的书签" class="headerlink" title="邬的书签"></a>邬的书签</h1><p>[TOC]</p>
-<h2 id="1-深度学习"><a href="#1-深度学习" class="headerlink" title="1.深度学习"></a>1.深度学习</h2><h2 id="2-Verilog"><a href="#2-Verilog" class="headerlink" title="2.Verilog"></a>2.Verilog</h2>]]></content>
+    <content><![CDATA[<h2 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h2><h2 id="Verilog"><a href="#Verilog" class="headerlink" title="Verilog"></a>Verilog</h2>]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
