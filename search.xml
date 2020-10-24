@@ -1,22 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>如何写文章</title>
+    <url>/2020/10/24/article-writing/</url>
+    <content><![CDATA[<h1 id="如何新建一篇文章"><a href="#如何新建一篇文章" class="headerlink" title="如何新建一篇文章"></a>如何新建一篇文章</h1><p>1.在博客文件夹目录下鼠标右键，点击Git Bash Here</p>
+<p>2.输入代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new article</span><br></pre></td></tr></table></figure>
+<p>回车新建文章，生成的.md文件在/source/_post/目录下</p>
+<p>3.</p>
+<p>清除之前的页面</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<p>生成新的页面</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>部署新的页面</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>打开本地服务器</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>4.文章Front Matter</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>文章的标题</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文章的日期</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>文章的所属类别，只有一个，填写多个时默认第一个</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>标签，可以有多个</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>是否支持评论</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>书签</title>
+    <url>/2020/10/24/bookmarks/</url>
+    <content><![CDATA[<h1 id="邬的书签"><a href="#邬的书签" class="headerlink" title="邬的书签"></a>邬的书签</h1><p>[TOC]</p>
+<h2 id="1-深度学习"><a href="#1-深度学习" class="headerlink" title="1.深度学习"></a>1.深度学习</h2><h2 id="2-Verilog"><a href="#2-Verilog" class="headerlink" title="2.Verilog"></a>2.Verilog</h2>]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/10/24/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <a id="more"></a>
-
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
