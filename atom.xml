@@ -6,7 +6,7 @@
   <link href="http://blog.too.ink/atom.xml" rel="self"/>
   
   <link href="http://blog.too.ink/"/>
-  <updated>2020-10-25T01:34:06.536Z</updated>
+  <updated>2020-10-28T07:58:21.996Z</updated>
   <id>http://blog.too.ink/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于激活函数前使用Batch Normalization的思考</title>
+    <link href="http://blog.too.ink/2020/10/28/batch-normalization-20201028/"/>
+    <id>http://blog.too.ink/2020/10/28/batch-normalization-20201028/</id>
+    <published>2020-10-28T07:21:45.000Z</published>
+    <updated>2020-10-28T07:58:21.996Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="没有BN时的网络流程"><a href="#没有BN时的网络流程" class="headerlink" title="没有BN时的网络流程"></a>没有BN时的网络流程</h1><p>在没有Batch Normalization时，$z^{[l]}=w^{[l]}a^{[l-1]}+b^{[l]}$，$a^{[l]}=g^{[l]}(z^{[l]})$</p><p>注：$[l]$表示第$l$层网络的数据，$g^{[l]}(z)$为第$l$层的激活函数</p><p>注：Batch Normalization的目的是使参数搜索问题变得更容易，使神经网络对于超参数的选择更稳定</p><h1 id="在激活函数前Batch-Normalization"><a href="#在激活函数前Batch-Normalization" class="headerlink" title="在激活函数前Batch Normalization"></a>在激活函数前Batch Normalization</h1><p>①    $z^{[l]}=w^{[l]}a^{[l-1]}+b^{[l]}$</p><p>②    $z_{BN}^{[l]}=\frac{z^{[l]}-u^{[l]}}{\sigma^{[l]}}=\frac{w^{[l]}a^{[l-1]}+b^{[l]}-u^{[l]}}{\sigma^{[l]}}$     则①可变为    $z^{[l]}=w^{[l]}a^{[l-1]}$，参数$b^{[l]}$失去了意义</p><p>③    由新加入的参数$\beta^{[l]}$和$\gamma^{[l]}$重新缩放    $\rightarrow$    $\overset{~}{z}^{[l]}=\beta^{[l]}z_{BN}^{[l]}+\gamma^{[l]}$</p><p>④    $\overset{~}{z}^{[l]}=\beta^{[l]}z_{BN}^{[l]}+\gamma^{[l]}=\beta^{[l]}\frac{z^{[l]}-u^{[l]}}{\sigma^{[l]}}+\gamma^{[l]}=\frac{\beta^{[l]}z^{[l]}}{\sigma^{[l]}}-\frac{\beta^{[l]}u^{[l]}}{\sigma^{[l]}}+\gamma^{[l]}=\frac{\beta^{[l]}w^{[l]}a^{[l-1]}}{\sigma^{[l]}}-\frac{\beta^{[l]}u^{[l]}}{\sigma^{[l]}}+\gamma^{[l]}$</p><h1 id="我的思考"><a href="#我的思考" class="headerlink" title="我的思考"></a>我的思考</h1><ol><li>​    $z^{[l]}=w^{[l]}a^{[l-1]}+b^{[l]}$ 和 $z^{[l]}=\frac{\beta^{[l]}w^{[l]}a^{[l-1]}}{\sigma^{[l]}}-\frac{\beta^{[l]}u^{[l]}}{\sigma^{[l]}}+\gamma^{[l]}$ 有多大的区别，后者是否同样是一个与前者一样的线性函数，如果是线性函数的话，这么做的意义何在？</li><li>​    可能的解释：$\sigma^{[l]}$ 和 $u^{[l]}$ 都是 $z^{[l]}$ 或者说 $a^{[l-1]}$ 的函数，并不能与①等同看成一个线性函数。</li><li>​    想法：$z^{[l]}=\frac{\beta^{[l]}w^{[l]}a^{[l-1]}}{\sigma^{[l]}}-\frac{\beta^{[l]}u^{[l]}}{\sigma^{[l]}}+\gamma^{[l]}$ 是否是一个参数更多的神经元，是否可以用更多的参数来构建次数更高的多项式然后来进行模拟？</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;没有BN时的网络流程&quot;&gt;&lt;a href=&quot;#没有BN时的网络流程&quot; class=&quot;headerlink&quot; title=&quot;没有BN时的网络流程&quot;&gt;&lt;/a&gt;没有BN时的网络流程&lt;/h1&gt;&lt;p&gt;在没有Batch Normalization时，$z^{[l]}=w^{[l</summary>
+      
+    
+    
+    
+    <category term="DeepLearning" scheme="http://blog.too.ink/categories/DeepLearning/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>2019刘晓燕救命班-comment</title>
