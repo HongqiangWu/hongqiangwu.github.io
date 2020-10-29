@@ -114,24 +114,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/10/24/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-  </entry>
-  <entry>
     <title>逻辑回归模型Tensorflow实战</title>
     <url>/2020/10/28/tensorflow-logistic-regression-20201028/</url>
     <content><![CDATA[<h1 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h1><h2 id="Note1-linspace-函数功能"><a href="#Note1-linspace-函数功能" class="headerlink" title="Note1    linspace()函数功能"></a>Note1    linspace()函数功能</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">x_data &#x3D; np.linspace(-0.5,0.5,10)</span><br></pre></td></tr></table></figure>
@@ -240,5 +222,19 @@
       <categories>
         <category>Tensorflow-Coding-Notes</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Tensorflow问题合集</title>
+    <url>/2020/10/29/tensorflow-questions-20201029/</url>
+    <content><![CDATA[<h6 id="Q1、在不同的超参数情况下，损失函数和拟合结果有很大差别，为什么会出现损失函数为直线，参数不更新的情况。"><a href="#Q1、在不同的超参数情况下，损失函数和拟合结果有很大差别，为什么会出现损失函数为直线，参数不更新的情况。" class="headerlink" title="Q1、在不同的超参数情况下，损失函数和拟合结果有很大差别，为什么会出现损失函数为直线，参数不更新的情况。"></a>Q1、在不同的超参数情况下，损失函数和拟合结果有很大差别，为什么会出现损失函数为直线，参数不更新的情况。</h6><p><img src="tensorflow-questions-20201029.assets/image-20201029195107148.png" alt="image-20201029195107148" style="zoom:50%;" /></p>
+<p><img src="tensorflow-questions-20201029.assets/image-20201029195649017.png" alt="image-20201029195649017" style="zoom:50%;" /></p>
+<h6 id="A1："><a href="#A1：" class="headerlink" title="A1："></a>A1：</h6>]]></content>
+      <categories>
+        <category>Tensorflow</category>
+      </categories>
+      <tags>
+        <tag>Deeplearning</tag>
+        <tag>Tensorflow</tag>
+      </tags>
   </entry>
 </search>
