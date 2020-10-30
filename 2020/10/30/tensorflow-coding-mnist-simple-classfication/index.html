@@ -23,18 +23,18 @@
   <meta name="description" content="Tesorflow实战：简单mnist分类任务。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tesorflow实战：简单mnist分类任务">
-<meta property="og:url" content="http://blog.too.ink/2020/10/30/tesorflow-coding-mnist-simple-classfication/index.html">
+<meta property="og:url" content="http://blog.too.ink/2020/10/30/tensorflow-coding-mnist-simple-classfication/index.html">
 <meta property="og:site_name" content="邬">
 <meta property="og:description" content="Tesorflow实战：简单mnist分类任务。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-30T02:44:37.000Z">
-<meta property="article:modified_time" content="2020-10-30T03:22:44.607Z">
+<meta property="article:modified_time" content="2020-10-30T06:29:33.796Z">
 <meta property="article:author" content="邬">
 <meta property="article:tag" content="Deeplearning">
 <meta property="article:tag" content="Tensorflow">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://blog.too.ink/2020/10/30/tesorflow-coding-mnist-simple-classfication/">
+<link rel="canonical" href="http://blog.too.ink/2020/10/30/tensorflow-coding-mnist-simple-classfication/">
 
 
 <script id="page-configurations">
@@ -197,7 +197,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.too.ink/2020/10/30/tesorflow-coding-mnist-simple-classfication/">
+    <link itemprop="mainEntityOfPage" href="http://blog.too.ink/2020/10/30/tensorflow-coding-mnist-simple-classfication/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -221,7 +221,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-10-30 10:44:37 / 修改时间：11:22:44" itemprop="dateCreated datePublished" datetime="2020-10-30T10:44:37+08:00">2020-10-30</time>
+              <time title="创建时间：2020-10-30 10:44:37 / 修改时间：14:29:33" itemprop="dateCreated datePublished" datetime="2020-10-30T10:44:37+08:00">2020-10-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -374,6 +374,179 @@
 </tbody>
 </table>
 </div>
+<h1 id="超参数调整"><a href="#超参数调整" class="headerlink" title="超参数调整"></a>超参数调整</h1><h2 id="只有输入层和输出层"><a href="#只有输入层和输出层" class="headerlink" title="只有输入层和输出层"></a>只有输入层和输出层</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>batch_size</th>
+<th>learning_rate</th>
+<th>accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32</td>
+<td>0.2</td>
+<td>0.9236</td>
+</tr>
+<tr>
+<td>64</td>
+<td>0.2</td>
+<td>0.9185</td>
+</tr>
+<tr>
+<td>128</td>
+<td>0.2</td>
+<td>0.9107</td>
+</tr>
+<tr>
+<td>16</td>
+<td>0.2</td>
+<td>0.9272</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0.2</td>
+<td>0.9310</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.2</td>
+<td>0.9308</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0.1</td>
+<td>0.9301</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="增加隐藏层"><a href="#增加隐藏层" class="headerlink" title="增加隐藏层"></a>增加隐藏层</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>隐藏层数</th>
+<th>隐藏层神经元数</th>
+<th>激活函数</th>
+<th>batch_size</th>
+<th>w</th>
+<th>learning_rate</th>
+<th>accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10</td>
+<td>tanh</td>
+<td>64</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.937</td>
+</tr>
+<tr>
+<td>1</td>
+<td>20</td>
+<td>tanh</td>
+<td>64</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.853</td>
+</tr>
+<tr>
+<td>1</td>
+<td>30</td>
+<td>tanh</td>
+<td>64</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.9638</td>
+</tr>
+<tr>
+<td>1</td>
+<td>30</td>
+<td>tanh</td>
+<td>32</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.961</td>
+</tr>
+<tr>
+<td>1</td>
+<td>30</td>
+<td>tanh</td>
+<td>48</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.962</td>
+</tr>
+<tr>
+<td>1</td>
+<td>30</td>
+<td>tanh</td>
+<td>128</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.962</td>
+</tr>
+<tr>
+<td>1</td>
+<td>40</td>
+<td>tanh</td>
+<td>64</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.967</td>
+</tr>
+<tr>
+<td>1</td>
+<td>50</td>
+<td>tanh</td>
+<td>64</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.798</td>
+</tr>
+<tr>
+<td>1</td>
+<td>32</td>
+<td>tanh</td>
+<td>64</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.962</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10 4</td>
+<td>tanh tanh</td>
+<td>64</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.868</td>
+</tr>
+<tr>
+<td>2</td>
+<td>20 10</td>
+<td>tanh tanh</td>
+<td>64</td>
+<td>0</td>
+<td>0.6</td>
+<td>0.905</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Q1:weight初试化为0，网络由于对称性实际上可以再压缩</strong></p>
 
     </div>
 
@@ -455,7 +628,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Original-Codes"><span class="nav-number">1.</span> <span class="nav-text">Original Codes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Notes"><span class="nav-number">2.</span> <span class="nav-text">Notes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Note1-tf-argmax"><span class="nav-number">2.1.</span> <span class="nav-text">Note1    tf.argmax()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Note2-tf-cast"><span class="nav-number">2.2.</span> <span class="nav-text">Note2    tf.cast()</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Original-Codes"><span class="nav-number">1.</span> <span class="nav-text">Original Codes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Notes"><span class="nav-number">2.</span> <span class="nav-text">Notes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Note1-tf-argmax"><span class="nav-number">2.1.</span> <span class="nav-text">Note1    tf.argmax()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Note2-tf-cast"><span class="nav-number">2.2.</span> <span class="nav-text">Note2    tf.cast()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B6%85%E5%8F%82%E6%95%B0%E8%B0%83%E6%95%B4"><span class="nav-number">3.</span> <span class="nav-text">超参数调整</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AA%E6%9C%89%E8%BE%93%E5%85%A5%E5%B1%82%E5%92%8C%E8%BE%93%E5%87%BA%E5%B1%82"><span class="nav-number">3.1.</span> <span class="nav-text">只有输入层和输出层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E9%9A%90%E8%97%8F%E5%B1%82"><span class="nav-number">3.2.</span> <span class="nav-text">增加隐藏层</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
