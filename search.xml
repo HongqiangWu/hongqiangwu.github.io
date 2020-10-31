@@ -611,7 +611,11 @@ a=\sigma(z), \quad z=\sum W_{j}^{\star} X_{j}+b \\
   <entry>
     <title>weekly-report-20201030</title>
     <url>/2020/10/30/weekly-report-20201030/</url>
-    <content><![CDATA[<h1 id="DeepLearning"><a href="#DeepLearning" class="headerlink" title="DeepLearning"></a>DeepLearning</h1><h2 id="吴承恩的深度学习课程"><a href="#吴承恩的深度学习课程" class="headerlink" title="吴承恩的深度学习课程"></a>吴承恩的深度学习课程</h2><h3 id="第一门课-神经网络和深度学习-Neural-Networks-and-Deep-Learning"><a href="#第一门课-神经网络和深度学习-Neural-Networks-and-Deep-Learning" class="headerlink" title="第一门课 神经网络和深度学习(Neural Networks and Deep Learning)"></a>第一门课 神经网络和深度学习(Neural Networks and Deep Learning)</h3><p><a href="http://www.ai-start.com/dl2017/html/lesson1-week1.html">第一周：深度学习引言(Introduction to Deep Learning)</a></p>
+    <content><![CDATA[<h1 id="本周学习报告"><a href="#本周学习报告" class="headerlink" title="本周学习报告"></a>本周学习报告</h1><ol>
+<li>这一周主要学习了吴恩达的深度学习课程，他的课程主要是讲了深度学习的一些基本原理和概念。下边的目录是我这一周所看的内容。</li>
+<li>另外本周还在Tensorflow上做了一个mnist手写数字的识别练习，代码和网络参数都在后文。</li>
+</ol>
+<h1 id="DeepLearning"><a href="#DeepLearning" class="headerlink" title="DeepLearning"></a>DeepLearning</h1><h2 id="吴承恩的深度学习课程"><a href="#吴承恩的深度学习课程" class="headerlink" title="吴承恩的深度学习课程"></a>吴承恩的深度学习课程</h2><h3 id="第一门课-神经网络和深度学习-Neural-Networks-and-Deep-Learning"><a href="#第一门课-神经网络和深度学习-Neural-Networks-and-Deep-Learning" class="headerlink" title="第一门课 神经网络和深度学习(Neural Networks and Deep Learning)"></a>第一门课 神经网络和深度学习(Neural Networks and Deep Learning)</h3><p><a href="http://www.ai-start.com/dl2017/html/lesson1-week1.html">第一周：深度学习引言(Introduction to Deep Learning)</a></p>
 <p>1.1 欢迎(Welcome) 1</p>
 <p>1.2 什么是神经网络？(What is a Neural Network)</p>
 <p>1.3 神经网络的监督学习(Supervised Learning with Neural Networks)</p>
@@ -713,6 +717,88 @@ a=\sigma(z), \quad z=\sum W_{j}^{\star} X_{j}+b \\
       </categories>
       <tags>
         <tag>study-report</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Optimizer优化器</title>
+    <url>/2020/10/31/Optimizer/</url>
+    <content><![CDATA[<h1 id="Optimizer"><a href="#Optimizer" class="headerlink" title="Optimizer"></a>Optimizer</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tf.train.GradientDescentOptimizer</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tf.train.AdadeltaOptimizer</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tf.train.AdagradOptimizer</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tf.train.AdagradDAOptimizer</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tf.train.MomentumOptimizer</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tf.train.AdamOptimizer</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tf.train.FtrlOptimizer</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tf.train.ProximalGradientDescentOptimizer</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tf.train.ProximalAdagradOptimizer</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tf.train.RMSPropOptimizer</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\mathrm{J}(\mathrm{W}): \text { 代价函教 }\\
+&\nabla \mathrm{w} \mathrm{J}(\mathrm{W}): \text { 代价函数的梯度 }\\
+&\eta \text {：学习率 }
+\end{aligned}</script><h2 id="SGD"><a href="#SGD" class="headerlink" title="SGD"></a>SGD</h2><script type="math/tex; mode=display">
+W=W-\eta \cdot \nabla w J\left(W ; x^{(i)} ; y^{(i)}\right)</script><h2 id="Momentum"><a href="#Momentum" class="headerlink" title="Momentum"></a>Momentum</h2><script type="math/tex; mode=display">
+\begin{aligned}
+&\mathrm{Y}: \text { 动力，通常设置为0.9 }\\
+&v_{t}=y v_{t-1}+\eta \nabla_{w} j(W)\\
+&W=W-v_{t}
+\end{aligned}</script><p>当前权值的改变会受到上一次权值改变的影响，类似于小球向下滚动的时候带上了惯性。这样可以加快小球的向下的速度。</p>
+<h2 id="NAG（Nesterov-accelerated-gradient）"><a href="#NAG（Nesterov-accelerated-gradient）" class="headerlink" title="NAG（Nesterov accelerated gradient）"></a>NAG（Nesterov accelerated gradient）</h2><script type="math/tex; mode=display">
+\begin{array}{l}
+v_{t}=\gamma v_{t-1}+\eta \nabla w J\left(W-\gamma v_{t-1}\right) \\
+W=W-v_{t}
+\end{array}</script><p>NAG在TF中跟Momentum合并在同一个函数tf.train.MomentumOptimizer中，可以通过参数配置启用。在Momentum中小球会盲目地跟从下坡的梯度，容易发生错误，所以我们需要一个更聪明的小球，这个小球提计算$W-\gamma v_{t-1}$可以表示小球下一个位置大概在哪里。从而我们可以提前计算下一个位置的梯度，然后使用到当前位置。</p>
+<h2 id="Adagrad"><a href="#Adagrad" class="headerlink" title="Adagrad"></a>Adagrad</h2><script type="math/tex; mode=display">
+\begin{array}
+&&i：代表第i个分类\\
+&t：代表出现次数\\
+&\epsilon：的作用是避免分母为0，取值一般为1e-8\\
+&\eta ：取值一般为0.01 \\
+&\mathrm{g}_{\mathrm{t},\mathrm{i}}=\nabla \mathrm{w}^{\mathrm{J}}\left(\mathrm{W}_{\mathrm{i}}\right)\\
+&W_{t+1}=W_{t}-\frac{\eta}{\sqrt{\sum_{t^{\prime}=1}^{t}\left(g_{t^{\prime}, i}\right)^{2}+\epsilon}} \odot g_{t}
+\end{array}</script><p>它是基于SGD的一种算法，它的核心思想是对比较常见的数据给予它比较小的学习率去调整参数，对于比较罕见的数据给予它比较大的学习率去调整参数。它很适合应用于数据稀疏的数据集（比如一个图片数据集，有10000张狗的昭片，10000张猫的照片，只有100张大象的昭片）。</p>
+<p>Adagrad主要的优势在于不需要人为的调节学习率，它可以自动调节。它的缺点在于，随着迭代次数的增多，学习率也会越来越低，最终会趋向于0。</p>
+<h2 id="RMSprop"><a href="#RMSprop" class="headerlink" title="RMSprop"></a>RMSprop</h2><p>RMS（Root Mean Square）是均方根的缩写。</p>
+<script type="math/tex; mode=display">
+\begin{array}
+&&\gamma：动力，通常设置为0.9\\
+&n：取值一般为0.001\\
+&E[g^2]_t：表示前t次的梯度平方的平均值\\
+&\mathrm{g}_{\mathrm{t}}=\nabla \mathrm{w} \mathrm{J}(\mathrm{W}) \\
+
+&E\left[g^{2}\right]_{t}=y E\left[g^{2}\right]_{t-1}+(1-\gamma) g^{2} t \\
+&W_{t+1}=W_{t}-\frac{\eta}{\sqrt{E\left[g^{2}\right]_{t}+\epsilon}} \odot g_{t}
+\end{array}</script><p>RMSprop借鉴了一些Adagrad的思想，不过这里RMSprop只用到了前$t-1$次梯度平方的平均值加上当前梯度的平方的和的开平方作为学习率的分母。这样RMSprop不会出现学习率越来越低的问题，而且也能自己调节学习率，并且可以有一个比较好的效果。</p>
+<h2 id="Adadelta"><a href="#Adadelta" class="headerlink" title="Adadelta"></a>Adadelta</h2><script type="math/tex; mode=display">
+\begin{array}{l}
+&\mathrm{g}_{\mathrm{t}}=\nabla \mathrm{w}{\mathrm{J}}(\mathrm{W}) \\
+&\Delta \mathrm{W}_{\mathrm{t}}=-\frac{\mathrm{\eta}}{\sqrt{E\left[g^{2}\right]_{t}+\epsilon}} \odot g_{t} \\
+&\Delta \mathrm{W}_{\mathrm{t}}=-\frac{\mathrm{\eta}}{R M S[\mathrm{g}]_{t}} \odot g_{t} \\
+&\mathrm{W}_{\mathrm{t}+1}=\mathrm{W}_{\mathrm{t}}-\frac{\mathrm{RMS}[\Delta \mathrm{W}]_{t-1}}{\mathrm{RMS}[\mathrm{g}]_{t}}
+\end{array}</script><p>使用Adadelta我们甚至不需要设置一个默认学习率，在Adadelta不需要使用学习率也可以达到一个非常好的效果。</p>
+<h2 id="Adam"><a href="#Adam" class="headerlink" title="Adam"></a>Adam</h2><script type="math/tex; mode=display">
+\begin{array}
+&&\beta_{1}: 一般取值 0.9 \\
+&\beta_{2}: 一般取值0.999 \\
+&\varepsilon: 避免分母为 0, 一般取值 10^{-8} \\ &\mathrm{m}_{\mathrm{t}}=\beta_{1}  \mathrm{m}_{\mathrm{t}-1}+\left(1-\beta_{1}\right) \mathrm{g}_{\mathrm{t}} \\
+&v_{t}=\beta_{2} v_{t-1}+\left(1-\beta_{2}\right) g^{2}_ t \\
+&\hat{\mathrm{m}}_{\mathrm{t}}=\frac{\mathrm{m}_{\mathrm{t}}}{1-\beta_{1}^{\mathrm{t}}} \\
+&\hat{v}_{\mathrm{t}}=\frac{v_{\mathrm{t}}}{1-\beta_{2}^{\mathrm{t}}} \\
+&\mathrm{W}_{\mathrm{t}+1}=\mathrm{W}_{\mathrm{t}}-\frac{\eta}{\sqrt{\hat{v}_{t}}+\varepsilon} \hat{m}_{t}
+\end{array}</script><p>就像Adadelta和RMSprop一样Adam会存储之前衰减的平方梯度，同时它也会保存之前衰减的梯度。经过一些处理之后再使用类似Adadelta和RMSprop的方式更新参数。</p>
+<h1 id="各种优化器对比"><a href="#各种优化器对比" class="headerlink" title="各种优化器对比"></a>各种优化器对比</h1><h2 id="标准梯度下降法"><a href="#标准梯度下降法" class="headerlink" title="标准梯度下降法"></a>标准梯度下降法</h2><p>标准梯度下降先计算所有样本汇总误差，然后根据总误差来更新权值。</p>
+<p>缺点：大样本时每次更新取值都要很长时间。</p>
+<h2 id="随机梯度下降法"><a href="#随机梯度下降法" class="headerlink" title="随机梯度下降法"></a>随机梯度下降法</h2><p>随机梯度下降随机抽取一个样本来计算误差，然后更新权值。</p>
+<p>缺点：取值更新快，但是不一定都是往正确的方向更新，会产生比较多的噪点。</p>
+<h2 id="批量梯度下降法（常用）"><a href="#批量梯度下降法（常用）" class="headerlink" title="批量梯度下降法（常用）"></a>批量梯度下降法（常用）</h2><p>批量梯度下降算是一种折中的方案，从总样本中选取一个批次（比如一共有10000个样本，随机选取100个样本作为一个batch），然后计算这个batch的总误差，根据总误差来更新权值。</p>
+]]></content>
+      <categories>
+        <category>Deeplearning</category>
+      </categories>
+      <tags>
+        <tag>Tensorflow</tag>
+        <tag>Deeplearning</tag>
       </tags>
   </entry>
 </search>
