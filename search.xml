@@ -922,7 +922,7 @@ W=W-v_{t}
 <p>原则一：选最佳答案而不是正确答案（四个选项都要认真看，不能偏心）（whq：用排除法做题）。</p>
 <p>原则二：不放过任何一个选项，仔细读每个选项，鉴于强干扰性，要求必须记住：选一个选项应有选的理由，不选一个选项也应有不选的理由。</p>
 <p>原则三：每个选项都当成生命中最重要的句子，其中每个单词哪怕是时态、冠词都有可能引起错误。（whq:觉得两个选项都正确，找不到错误的点再来看这个）</p>
-<h2 id="二、考研阅读的猜题技巧及救命法则"><a href="#二、考研阅读的猜题技巧及救命法则" class="headerlink" title="二、考研阅读的猜题技巧及救命法则"></a>二、考研阅读的猜题技巧及救命法则</h2><h3 id="whq说明："><a href="#whq说明：" class="headerlink" title="whq说明："></a>whq说明：</h3><p>主要掌握上边的内容，猜题还是没有自己会做靠谱，靠猜题可以解决一两个不会的。</p>
+<h2 id="二、考研阅读的猜题技巧及救命法则"><a href="#二、考研阅读的猜题技巧及救命法则" class="headerlink" title="二、考研阅读的猜题技巧及救命法则"></a>二、考研阅读的猜题技巧及救命法则</h2><h3 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h3><p>主要掌握上边的内容，猜题还是没有自己会做靠谱，靠猜题可以解决一两个不会的。</p>
 <h3 id="1、“体现中心思想的选项往往是答案”"><a href="#1、“体现中心思想的选项往往是答案”" class="headerlink" title="1、“体现中心思想的选项往往是答案”"></a>1、“体现中心思想的选项往往是答案”</h3><p>考研文章中所有的细节、例子、引语都是为了说明文章主旨、段落主旨，所以考细节的题目，虽然不是主旨题，但能体现中心思想的选项是答案的可能性要远远大于其他选项。</p>
 <h3 id="2、“不看文章时，看似极其合理的选项不是答案；看似不太合理的选项往往是答案”"><a href="#2、“不看文章时，看似极其合理的选项不是答案；看似不太合理的选项往往是答案”" class="headerlink" title="2、“不看文章时，看似极其合理的选项不是答案；看似不太合理的选项往往是答案”"></a>2、“不看文章时，看似极其合理的选项不是答案；看似不太合理的选项往往是答案”</h3><p>四个选择项中若有一个对问题而言、根据常识看似不合理，而其他几项根据常识都可合理地作为问题的答案，此时若我们没看懂文中意思，我们可以大胆猜测这个看似不合理的选项是答案。作为答案的选项看起来不合理的原因可能是其中某个词不是常用意义，若根据其通常意义理解则该选项看起来当然不合理，也可能是一些特定的理由，无论是哪种情况，都有助于使试题具有难度。</p>
 <h3 id="3、“完全照抄原文的选项往往不是答案；和原文作关键词同义替换的选项往往是答案”"><a href="#3、“完全照抄原文的选项往往不是答案；和原文作关键词同义替换的选项往往是答案”" class="headerlink" title="3、“完全照抄原文的选项往往不是答案；和原文作关键词同义替换的选项往往是答案”"></a>3、“完全照抄原文的选项往往不是答案；和原文作关键词同义替换的选项往往是答案”</h3><p>在设计题目时，为了迷惑考生，命题者一般都会将原文中的内容换个说法作为正确答案的选项，而将某些与题干问题不符的原文原话生拉硬扯过来作为干扰项，或将原文中的某些句子做了细微的改变引诱考生上当，所以当原文中最变态最生涩的词汇在选项中出现的时候，该选项往往是错误答案。</p>
@@ -1071,6 +1071,68 @@ W=W-v_{t}
 ]]></content>
       <categories>
         <category>Postgraduate-Qualifying-Examination</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>weekly-report-20201106</title>
+    <url>/2020/11/06/weekly-report-20201106/</url>
+    <content><![CDATA[<h1 id="本周学习内容报告"><a href="#本周学习内容报告" class="headerlink" title="本周学习内容报告"></a>本周学习内容报告</h1><p>本周学习了吴恩达的深度学习课程，主要包含的内容有机器学习的一些方法论，卷积神经网络的详解。另外就是进行了Tensorflow的编程练习，实现了卷积神经网络来对MNIST数据集的手写数字进行识别，经过调试，测试集的识别准确率达到了98%以上。并在Tensorflow上对经典的LeNet-5网络进行了实现，没有调试出比较好的训练结果。</p>
+<h1 id="Tensorflow实战"><a href="#Tensorflow实战" class="headerlink" title="Tensorflow实战"></a>Tensorflow实战</h1><p>1、学会了在Tensorflow中利用dropout来减小方差，防止过拟合。</p>
+<p>2、在MNIST手写数字识别网络中对比了不同的优化器的效果：GradientDescentOptimizer和AdamOptimizer，对比了均方误差和交叉熵作为误差函数时的效果。</p>
+<p>3、学会了Tensorboard的使用。</p>
+<p>4、构建卷积神经网路来对MNIST手写数字进行识别，训练集准确率：0.9918，测试集准确率：0.9832。</p>
+<p>5、实现经典的LeNet-5进行MNIST手写数字的识别，没有调试出比较高的准确率。</p>
+<h1 id="吴恩达的深度学习理论课程——本周学习内容目录"><a href="#吴恩达的深度学习理论课程——本周学习内容目录" class="headerlink" title="吴恩达的深度学习理论课程——本周学习内容目录"></a>吴恩达的深度学习理论课程——本周学习内容目录</h1><h2 id="第三门课-结构化机器学习项目-Structuring-Machine-Learning-Projects"><a href="#第三门课-结构化机器学习项目-Structuring-Machine-Learning-Projects" class="headerlink" title="第三门课 结构化机器学习项目 (Structuring Machine Learning Projects)"></a>第三门课 结构化机器学习项目 (Structuring Machine Learning Projects)</h2><p><a href="http://www.ai-start.com/dl2017/html/lesson3-week1.html">第一周：机器学习策略（1）(ML Strategy (1))</a></p>
+<p>1.1 为什么是ML策略？ (Why ML Strategy)</p>
+<p>1.2 正交化(Orthogonalization)</p>
+<p>1.3 单一数字评估指标(Single number evaluation metric)</p>
+<p>1.4 满足和优化指标 (Satisficing and Optimizing metric)</p>
+<p>1.5 训练集、开发集、测试集的划分(Train/dev/test distributions)</p>
+<p>1.6 开发集和测试集的大小 (Size of the dev and test sets)</p>
+<p>1.7 什么时候改变开发集/测试集和评估指标(When to change dev/test sets and metrics)</p>
+<p>1.8 为什么是人的表现 (Why human-level performance?)</p>
+<p>1.9 可避免偏差(Avoidable bias)</p>
+<p>1.10 理解人类的表现 (Understanding human-level performance)</p>
+<p>1.11 超过人类的表现(Surpassing human-level performance)</p>
+<p>1.12 改善你的模型表现 (Improving your model performance)</p>
+<p><a href="http://www.ai-start.com/dl2017/html/lesson3-week2.html">第二周：机器学习策略（2）(ML Strategy (2))</a></p>
+<p>2.1 误差分析 (Carrying out error analysis)</p>
+<p>2.2 清除标注错误的数据(Cleaning up incorrectly labeled data)</p>
+<p>2.3 快速搭建你的第一个系统，并进行迭代(Build your first system quickly, then iterate)</p>
+<p>2.4 在不同的分布上的训练集和测试集 (Training and testing on different distributions)</p>
+<p>2.5 数据分布不匹配的偏差与方差分析 (Bias and Variance with mismatched data distributions)</p>
+<p>2.6 处理数据不匹配问题(Addressing data mismatch)</p>
+<p>2.7 迁移学习 (Transfer learning)</p>
+<p>2.8 多任务学习(Multi-task learning)</p>
+<p>2.9 什么是端到端的深度学习？ (What is end-to-end deep learning?)</p>
+<p>2.10 是否使用端到端的深度学习方法 (Whether to use end-to-end deep learning)</p>
+<h2 id="第四门课-卷积神经网络（Convolutional-Neural-Networks）"><a href="#第四门课-卷积神经网络（Convolutional-Neural-Networks）" class="headerlink" title="第四门课 卷积神经网络（Convolutional Neural Networks）"></a>第四门课 卷积神经网络（Convolutional Neural Networks）</h2><p><a href="http://www.ai-start.com/dl2017/html/lesson4-week1.html">第一周 卷积神经网络(Foundations of Convolutional Neural Networks)</a></p>
+<p>2.1.1 计算机视觉（Computer vision）</p>
+<p>1.2 边缘检测示例（Edge detection example）</p>
+<p>1.3 更多边缘检测内容（More edge detection）</p>
+<p>1.4 Padding</p>
+<p>1.5 卷积步长（Strided convolutions）</p>
+<p>1.6 三维卷积（Convolutions over volumes）</p>
+<p>1.7 单层卷积网络（One layer of a convolutional network）</p>
+<p>1.8 简单卷积网络示例（A simple convolution network example）</p>
+<p>1.9 池化层（Pooling layers）</p>
+<p>1.10 卷积神经网络示例（Convolutional neural network example）</p>
+<p>1.11 为什么使用卷积？（Why convolutions?）</p>
+<p><a href="http://www.ai-start.com/dl2017/html/lesson4-week2.html">第二周 深度卷积网络：实例探究(Deep convolutional models: case studies)</a></p>
+<p>2.1 为什么要进行实例探究？（Why look at case studies?）</p>
+<p>2.2 经典网络（Classic networks）</p>
+<p>2.3 残差网络（Residual Networks (ResNets)）</p>
+<p>2.4 残差网络为什么有用？（Why ResNets work?）</p>
+<p>2.5 网络中的网络以及 1×1 卷积（Network in Network and 1×1 convolutions）</p>
+<p>2.6 谷歌 Inception 网络简介（Inception network motivation）</p>
+<p>2.7 Inception 网络（Inception network）</p>
+<p>2.8 使用开源的实现方案（Using open-source implementations）</p>
+<p>2.9 迁移学习（Transfer Learning）</p>
+<p>2.10 数据扩充（Data augmentation）</p>
+<p>2.11 计算机视觉现状（The state of computer vision）</p>
+]]></content>
+      <categories>
+        <category>Study-Report</category>
       </categories>
   </entry>
 </search>
