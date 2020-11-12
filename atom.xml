@@ -6,7 +6,7 @@
   <link href="http://blog.too.ink/atom.xml" rel="self"/>
   
   <link href="http://blog.too.ink/"/>
-  <updated>2020-11-06T11:52:14.004Z</updated>
+  <updated>2020-11-12T06:22:02.642Z</updated>
   <id>http://blog.too.ink/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Verilog Coding Notes:经典例程</title>
+    <link href="http://blog.too.ink/2020/11/09/verilog-coding-notes/"/>
+    <id>http://blog.too.ink/2020/11/09/verilog-coding-notes/</id>
+    <published>2020-11-09T06:30:48.000Z</published>
+    <updated>2020-11-12T06:22:02.642Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Decoder-And-Encoders"><a href="#Decoder-And-Encoders" class="headerlink" title="Decoder And Encoders"></a>Decoder And Encoders</h1>]]></content>
+    
+    
+    <summary type="html">Verilog经典例程笔记。</summary>
+    
+    
+    
+    
+    <category term="ASIC" scheme="http://blog.too.ink/tags/ASIC/"/>
+    
+    <category term="Verilog" scheme="http://blog.too.ink/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>weekly-report-20201113</title>
+    <link href="http://blog.too.ink/2020/11/09/weekly-report-20201113/"/>
+    <id>http://blog.too.ink/2020/11/09/weekly-report-20201113/</id>
+    <published>2020-11-09T06:23:31.000Z</published>
+    <updated>2020-11-09T08:06:12.482Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Deep-Learning"><a href="#Deep-Learning" class="headerlink" title="Deep Learning"></a>Deep Learning</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>1、目标检测</p><p>2、RNN</p><h1 id="ASIC"><a href="#ASIC" class="headerlink" title="ASIC"></a>ASIC</h1><h2 id="目标-1"><a href="#目标-1" class="headerlink" title="目标"></a>目标</h2><p>1、看懂一篇sparsity的处理器论文</p><h1 id="Verilog"><a href="#Verilog" class="headerlink" title="Verilog"></a>Verilog</h1><h2 id="目标-2"><a href="#目标-2" class="headerlink" title="目标"></a>目标</h2><h2 id="达成"><a href="#达成" class="headerlink" title="达成"></a>达成</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Deep-Learning&quot;&gt;&lt;a href=&quot;#Deep-Learning&quot; class=&quot;headerlink&quot; title=&quot;Deep Learning&quot;&gt;&lt;/a&gt;Deep Learning&lt;/h1&gt;&lt;h2 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot; cla</summary>
+      
+    
+    
+    
+    <category term="Study-Report" scheme="http://blog.too.ink/categories/Study-Report/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>weekly-report-20201106</title>

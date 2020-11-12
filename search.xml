@@ -1135,4 +1135,24 @@ W=W-v_{t}
         <category>Study-Report</category>
       </categories>
   </entry>
+  <entry>
+    <title>weekly-report-20201113</title>
+    <url>/2020/11/09/weekly-report-20201113/</url>
+    <content><![CDATA[<h1 id="Deep-Learning"><a href="#Deep-Learning" class="headerlink" title="Deep Learning"></a>Deep Learning</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>1、目标检测</p>
+<p>2、RNN</p>
+<h1 id="ASIC"><a href="#ASIC" class="headerlink" title="ASIC"></a>ASIC</h1><h2 id="目标-1"><a href="#目标-1" class="headerlink" title="目标"></a>目标</h2><p>1、看懂一篇sparsity的处理器论文</p>
+<h1 id="Verilog"><a href="#Verilog" class="headerlink" title="Verilog"></a>Verilog</h1><h2 id="目标-2"><a href="#目标-2" class="headerlink" title="目标"></a>目标</h2><h2 id="达成"><a href="#达成" class="headerlink" title="达成"></a>达成</h2>]]></content>
+      <categories>
+        <category>Study-Report</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Verilog Coding Notes:经典例程</title>
+    <url>/2020/11/09/verilog-coding-notes/</url>
+    <content><![CDATA[<h1 id="Decoder-And-Encoders"><a href="#Decoder-And-Encoders" class="headerlink" title="Decoder And Encoders"></a>Decoder And Encoders</h1>]]></content>
+      <tags>
+        <tag>ASIC</tag>
+        <tag>Verilog</tag>
+      </tags>
+  </entry>
 </search>
