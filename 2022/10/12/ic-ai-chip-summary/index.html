@@ -20,19 +20,23 @@
     var CONFIG = {"hostname":"blog.too.ink","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="关于激活函数前使用Batch Normalization的思考，网络中激活函数前加入BN的公式推导以及自己的问题和想法。">
+  <meta name="description" content="AI芯片研究综述">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于激活函数前使用Batch Normalization的思考">
-<meta property="og:url" content="http://blog.too.ink/2020/10/28/deeplearning-batch-normalization/index.html">
+<meta property="og:title" content="AI芯片研究综述">
+<meta property="og:url" content="http://blog.too.ink/2022/10/12/ic-ai-chip-summary/index.html">
 <meta property="og:site_name" content="邬">
-<meta property="og:description" content="关于激活函数前使用Batch Normalization的思考，网络中激活函数前加入BN的公式推导以及自己的问题和想法。">
+<meta property="og:description" content="AI芯片研究综述">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-10-28T07:21:45.000Z">
-<meta property="article:modified_time" content="2022-10-12T14:11:18.600Z">
+<meta property="article:published_time" content="2022-10-12T07:09:18.000Z">
+<meta property="article:modified_time" content="2022-10-12T14:11:18.603Z">
 <meta property="article:author" content="邬">
+<meta property="article:tag" content="ASIC">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="IC">
+<meta property="article:tag" content="FPGA">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://blog.too.ink/2020/10/28/deeplearning-batch-normalization/">
+<link rel="canonical" href="http://blog.too.ink/2022/10/12/ic-ai-chip-summary/">
 
 
 <script id="page-configurations">
@@ -45,7 +49,7 @@
   };
 </script>
 
-  <title>关于激活函数前使用Batch Normalization的思考 | 邬</title>
+  <title>AI芯片研究综述 | 邬</title>
   
 
 
@@ -195,7 +199,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.too.ink/2020/10/28/deeplearning-batch-normalization/">
+    <link itemprop="mainEntityOfPage" href="http://blog.too.ink/2022/10/12/ic-ai-chip-summary/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -208,7 +212,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          关于激活函数前使用Batch Normalization的思考
+          AI芯片研究综述
         </h1>
 
         <div class="post-meta">
@@ -217,23 +221,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-10-28 15:21:45" itemprop="dateCreated datePublished" datetime="2020-10-28T15:21:45+08:00">2020-10-28</time>
+              <time title="创建时间：2022-10-12 15:09:18 / 修改时间：22:11:18" itemprop="dateCreated datePublished" datetime="2022-10-12T15:09:18+08:00">2022-10-12</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-12 22:11:18" itemprop="dateModified" datetime="2022-10-12T22:11:18+08:00">2022-10-12</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/DeepLearning/" itemprop="url" rel="index"><span itemprop="name">DeepLearning</span></a>
+                  <a href="/categories/IC/" itemprop="url" rel="index"><span itemprop="name">IC</span></a>
                 </span>
             </span>
 
@@ -246,13 +244,13 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/10/28/deeplearning-batch-normalization/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/28/deeplearning-batch-normalization/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/10/12/ic-ai-chip-summary/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/10/12/ic-ai-chip-summary/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
-            <div class="post-description">关于激活函数前使用Batch Normalization的思考，网络中激活函数前加入BN的公式推导以及自己的问题和想法。</div>
+            <div class="post-description">AI芯片研究综述</div>
 
         </div>
       </header>
@@ -263,18 +261,53 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="没有BN时的网络流程"><a href="#没有BN时的网络流程" class="headerlink" title="没有BN时的网络流程"></a>没有BN时的网络流程</h1><p>在没有Batch Normalization时，$z^{[l]}=w^{[l]}a^{[l-1]}+b^{[l]}$，$a^{[l]}=g^{[l]}(z^{[l]})$</p>
-<p>注：$[l]$表示第$l$层网络的数据，$g^{[l]}(z)$为第$l$层的激活函数</p>
-<p>注：Batch Normalization的目的是使参数搜索问题变得更容易，使神经网络对于超参数的选择更稳定</p>
-<h1 id="在激活函数前Batch-Normalization"><a href="#在激活函数前Batch-Normalization" class="headerlink" title="在激活函数前Batch Normalization"></a>在激活函数前Batch Normalization</h1><p>①    $z^{[l]}=w^{[l]}a^{[l-1]}+b^{[l]}$</p>
-<p>②    $z_{BN}^{[l]}=\frac{z^{[l]}-u^{[l]}}{\sigma^{[l]}}=\frac{w^{[l]}a^{[l-1]}+b^{[l]}-u^{[l]}}{\sigma^{[l]}}$     则①可变为    $z^{[l]}=w^{[l]}a^{[l-1]}$，参数$b^{[l]}$失去了意义</p>
-<p>③    由新加入的参数$\beta^{[l]}$和$\gamma^{[l]}$重新缩放    $\rightarrow$    $\overset{~}{z}^{[l]}=\beta^{[l]}z_{BN}^{[l]}+\gamma^{[l]}$</p>
-<p>④    $\overset{~}{z}^{[l]}=\beta^{[l]}z_{BN}^{[l]}+\gamma^{[l]}=\beta^{[l]}\frac{z^{[l]}-u^{[l]}}{\sigma^{[l]}}+\gamma^{[l]}=\frac{\beta^{[l]}z^{[l]}}{\sigma^{[l]}}-\frac{\beta^{[l]}u^{[l]}}{\sigma^{[l]}}+\gamma^{[l]}=\frac{\beta^{[l]}w^{[l]}a^{[l-1]}}{\sigma^{[l]}}-\frac{\beta^{[l]}u^{[l]}}{\sigma^{[l]}}+\gamma^{[l]}$</p>
-<h1 id="我的思考"><a href="#我的思考" class="headerlink" title="我的思考"></a>我的思考</h1><ol>
-<li>​    $z^{[l]}=w^{[l]}a^{[l-1]}+b^{[l]}$ 和 $z^{[l]}=\frac{\beta^{[l]}w^{[l]}a^{[l-1]}}{\sigma^{[l]}}-\frac{\beta^{[l]}u^{[l]}}{\sigma^{[l]}}+\gamma^{[l]}$ 有多大的区别，后者是否同样是一个与前者一样的线性函数，如果是线性函数的话，这么做的意义何在？</li>
-<li>​    可能的解释：$\sigma^{[l]}$ 和 $u^{[l]}$ 都是 $z^{[l]}$ 或者说 $a^{[l-1]}$ 的函数，并不能与①等同看成一个线性函数。</li>
-<li>​    想法：$z^{[l]}=\frac{\beta^{[l]}w^{[l]}a^{[l-1]}}{\sigma^{[l]}}-\frac{\beta^{[l]}u^{[l]}}{\sigma^{[l]}}+\gamma^{[l]}$ 是否是一个参数更多的神经元，是否可以用更多的参数来构建次数更高的多项式然后来进行模拟？</li>
+        <p>[TOC]</p>
+<h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1 定义"></a>1 定义</h2><p>​        广义上讲，AI芯片指能一切够对AI算法进行部署运行的芯片，包括GPU、CPU、FPGA、ASIC等。</p>
+<h3 id="1-1-GPU"><a href="#1-1-GPU" class="headerlink" title="1.1 GPU"></a>1.1 GPU</h3><p><strong>定义</strong></p>
+<p>​        GPU是一种由大量核心组成的大规模并行计算架构，专为同时处理多重任务而设计的芯片。</p>
+<p><strong>产品特点：</strong></p>
+<ol>
+<li>计算能力强大。GPU中超过80%部分为运算单元（ALU），擅长大规模并行运算。</li>
+<li>产品成熟。目前，CPU+GPU异构模式已经在人工智能云端训练平台得到广泛应用。</li>
 </ol>
+<p><strong>市场格局：</strong></p>
+<p>​        英伟达绝对领先，AMD跟随，英特尔规划进入；国内处于起步阶段，比特大陆2019年推出了第一代的产品，但市场份额几乎可以忽略。</p>
+<p><strong>发展趋势：</strong></p>
+<ol>
+<li>短期来看，GPU仍将主导AI芯片市场。GPU凭借其强大的计算能力、较高的通用性，将继续占AI芯片的主要市场份额。而且，两大GPU厂商都还在不断升级架构并持续推出新品，深度学习性能提升潜力大。</li>
+<li>长期来看，GPU主要方向是高级复杂算法和通用型人工智能平台。</li>
+</ol>
+<h3 id="1-2-FPGA"><a href="#1-2-FPGA" class="headerlink" title="1.2 FPGA"></a>1.2 FPGA</h3><p><strong>定 义</strong></p>
+<p>​        FPGA（现场可编程门阵列）芯片集成了大量的基本门电路以及存储器，灵活性介于CPU、GPU和ASIC之间，在硬件固定之前，允许使用者灵活使用软件进行编程。 </p>
+<p> <strong>优 势：</strong></p>
+<ol>
+<li>算力强劲。</li>
+<li>功耗较低。相比CPU和GPU，FPGA没有取指和译码操作，能耗比指标优秀。</li>
+<li>灵活性好，成本有优势。</li>
+</ol>
+<p><strong>国际格局：</strong></p>
+<p>​        当前，全球FPGA市场被赛灵思、英特尔、莱迪思等巨头垄断。其中，赛灵思和英特尔合计占到市场的70%左右，赛灵思的市场份额超过40%。 </p>
+<p><strong>国内格局：</strong></p>
+<p>​        国内FPGA市场刚刚起步，差距较大，主要市场依然为赛灵思、英特尔、莱迪思等国际大厂占据，其中2017年赛灵思和英特尔合计市场规模占比达到80%，国内厂商市场份额较小，只占4%。其中主要参与者包括高云半导体、上海安路科技、同创国芯等。</p>
+<h3 id="1-3-ASIC"><a href="#1-3-ASIC" class="headerlink" title="1.3 ASIC"></a>1.3 ASIC</h3><p><strong>定 义：</strong></p>
+<p>​        ASIC（专用芯片）是一种为特定目的、面向特定用户需求设计的定制芯片，具备性能更强、体积小、功耗低、可靠性更高等优点。在大规模量产的情况下，还具备成本低的特点。</p>
+<p><strong>性 能：</strong></p>
+<p>​        ASIC芯片主要应用于深度学习加速。其中表现最为突出的ASIC就是Google的TPU（张量处理芯片）。谷歌数据显示，TPU 平均比当时的 GPU 或CPU 快15-30倍，能耗比高出约 30-80倍。 </p>
+<p><strong>市场格局：</strong></p>
+<p>​        国外主要是谷歌在主导，国内企业主要是寒武纪。近年来，国内一些AI算法企业开始向下游延伸，针对自身算法特点自研或者联合开发芯片，行业呈现出百花齐放的状态。</p>
+<p><strong>风 险：</strong></p>
+<p>​        ASIC一旦制造完成以后就不能后续修改，且研发周期较长、商业风险较大。一般只有大企业或背靠大企业的团队愿意投入到它的完整开发中。</p>
+<h2 id="2-分类"><a href="#2-分类" class="headerlink" title="2 分类"></a>2 分类</h2><h3 id="2-1-按照承担任务划分"><a href="#2-1-按照承担任务划分" class="headerlink" title="2.1 按照承担任务划分"></a>2.1 按照承担任务划分</h3><p><strong>推理芯片</strong></p>
+<p>​        用于算法模型开发和训练。</p>
+<p><strong>训练芯片</strong></p>
+<p>​        用于应用层，利用训练好的模型，通过芯片计算“推理”出结果。</p>
+<h3 id="2-2-按照部署位置划分"><a href="#2-2-按照部署位置划分" class="headerlink" title="2.2 按照部署位置划分"></a>2.2 按照部署位置划分</h3><p><strong>云端芯片</strong></p>
+<p>​        部署在公有云、私有云或者混合云上，不但可用于训练，也可用于推理，算力强劲。</p>
+<p><strong>边缘端芯片</strong></p>
+<p>​        主要应用于嵌入式、移动终端等领域，此类芯片一般体积小、耗电低，性能要求也相对不高，一般只需具备一两种AI能力，用于推理。</p>
+<h2 id="3-ASIC"><a href="#3-ASIC" class="headerlink" title="3 ASIC"></a>3 ASIC</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37719487/article/details/113325933">AI芯片：几种常见类型的AI芯片</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37719487/article/details/113109669">AI芯片：指令集架构处理器Diannao分析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37719487/article/details/113649805">AI芯片论文：ASIC系列</a></p>
 
     </div>
 
@@ -283,6 +316,12 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ASIC/" rel="tag"># ASIC</a>
+              <a href="/tags/AI/" rel="tag"># AI</a>
+              <a href="/tags/IC/" rel="tag"># IC</a>
+              <a href="/tags/FPGA/" rel="tag"># FPGA</a>
+          </div>
 
         
 
@@ -290,13 +329,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/10/25/postgraduate-qualifying-examination-english/" rel="prev" title="考研：刘晓燕英语保命班">
-      <i class="fa fa-chevron-left"></i> 考研：刘晓燕英语保命班
+    <a href="/2021/05/13/tensorflow-notes/" rel="prev" title="Win10+Anaconda+Python+Tensorflow环境配置">
+      <i class="fa fa-chevron-left"></i> Win10+Anaconda+Python+Tensorflow环境配置
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/10/28/tensorflow-coding-notes-nonlinear-logic-regression/" rel="next" title="Tensorflow-Coding-Notes：非线性逻辑回归">
-      Tensorflow-Coding-Notes：非线性逻辑回归 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -356,7 +392,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B2%A1%E6%9C%89BN%E6%97%B6%E7%9A%84%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">没有BN时的网络流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E5%89%8DBatch-Normalization"><span class="nav-number">2.</span> <span class="nav-text">在激活函数前Batch Normalization</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E6%80%9D%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">我的思考</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">1 定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-GPU"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 GPU</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-FPGA"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 FPGA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-ASIC"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 ASIC</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%88%86%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">2 分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E6%8C%89%E7%85%A7%E6%89%BF%E6%8B%85%E4%BB%BB%E5%8A%A1%E5%88%92%E5%88%86"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 按照承担任务划分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E6%8C%89%E7%85%A7%E9%83%A8%E7%BD%B2%E4%BD%8D%E7%BD%AE%E5%88%92%E5%88%86"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 按照部署位置划分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-ASIC"><span class="nav-number">3.</span> <span class="nav-text">3 ASIC</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

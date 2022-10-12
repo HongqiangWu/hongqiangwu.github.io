@@ -1254,4 +1254,65 @@ W=W-v_{t}
         <tag>Tensorflow</tag>
       </tags>
   </entry>
+  <entry>
+    <title>AI芯片研究综述</title>
+    <url>/2022/10/12/ic-ai-chip-summary/</url>
+    <content><![CDATA[<p>[TOC]</p>
+<h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1 定义"></a>1 定义</h2><p>​        广义上讲，AI芯片指能一切够对AI算法进行部署运行的芯片，包括GPU、CPU、FPGA、ASIC等。</p>
+<h3 id="1-1-GPU"><a href="#1-1-GPU" class="headerlink" title="1.1 GPU"></a>1.1 GPU</h3><p><strong>定义</strong></p>
+<p>​        GPU是一种由大量核心组成的大规模并行计算架构，专为同时处理多重任务而设计的芯片。</p>
+<p><strong>产品特点：</strong></p>
+<ol>
+<li>计算能力强大。GPU中超过80%部分为运算单元（ALU），擅长大规模并行运算。</li>
+<li>产品成熟。目前，CPU+GPU异构模式已经在人工智能云端训练平台得到广泛应用。</li>
+</ol>
+<p><strong>市场格局：</strong></p>
+<p>​        英伟达绝对领先，AMD跟随，英特尔规划进入；国内处于起步阶段，比特大陆2019年推出了第一代的产品，但市场份额几乎可以忽略。</p>
+<p><strong>发展趋势：</strong></p>
+<ol>
+<li>短期来看，GPU仍将主导AI芯片市场。GPU凭借其强大的计算能力、较高的通用性，将继续占AI芯片的主要市场份额。而且，两大GPU厂商都还在不断升级架构并持续推出新品，深度学习性能提升潜力大。</li>
+<li>长期来看，GPU主要方向是高级复杂算法和通用型人工智能平台。</li>
+</ol>
+<h3 id="1-2-FPGA"><a href="#1-2-FPGA" class="headerlink" title="1.2 FPGA"></a>1.2 FPGA</h3><p><strong>定 义</strong></p>
+<p>​        FPGA（现场可编程门阵列）芯片集成了大量的基本门电路以及存储器，灵活性介于CPU、GPU和ASIC之间，在硬件固定之前，允许使用者灵活使用软件进行编程。 </p>
+<p> <strong>优 势：</strong></p>
+<ol>
+<li>算力强劲。</li>
+<li>功耗较低。相比CPU和GPU，FPGA没有取指和译码操作，能耗比指标优秀。</li>
+<li>灵活性好，成本有优势。</li>
+</ol>
+<p><strong>国际格局：</strong></p>
+<p>​        当前，全球FPGA市场被赛灵思、英特尔、莱迪思等巨头垄断。其中，赛灵思和英特尔合计占到市场的70%左右，赛灵思的市场份额超过40%。 </p>
+<p><strong>国内格局：</strong></p>
+<p>​        国内FPGA市场刚刚起步，差距较大，主要市场依然为赛灵思、英特尔、莱迪思等国际大厂占据，其中2017年赛灵思和英特尔合计市场规模占比达到80%，国内厂商市场份额较小，只占4%。其中主要参与者包括高云半导体、上海安路科技、同创国芯等。</p>
+<h3 id="1-3-ASIC"><a href="#1-3-ASIC" class="headerlink" title="1.3 ASIC"></a>1.3 ASIC</h3><p><strong>定 义：</strong></p>
+<p>​        ASIC（专用芯片）是一种为特定目的、面向特定用户需求设计的定制芯片，具备性能更强、体积小、功耗低、可靠性更高等优点。在大规模量产的情况下，还具备成本低的特点。</p>
+<p><strong>性 能：</strong></p>
+<p>​        ASIC芯片主要应用于深度学习加速。其中表现最为突出的ASIC就是Google的TPU（张量处理芯片）。谷歌数据显示，TPU 平均比当时的 GPU 或CPU 快15-30倍，能耗比高出约 30-80倍。 </p>
+<p><strong>市场格局：</strong></p>
+<p>​        国外主要是谷歌在主导，国内企业主要是寒武纪。近年来，国内一些AI算法企业开始向下游延伸，针对自身算法特点自研或者联合开发芯片，行业呈现出百花齐放的状态。</p>
+<p><strong>风 险：</strong></p>
+<p>​        ASIC一旦制造完成以后就不能后续修改，且研发周期较长、商业风险较大。一般只有大企业或背靠大企业的团队愿意投入到它的完整开发中。</p>
+<h2 id="2-分类"><a href="#2-分类" class="headerlink" title="2 分类"></a>2 分类</h2><h3 id="2-1-按照承担任务划分"><a href="#2-1-按照承担任务划分" class="headerlink" title="2.1 按照承担任务划分"></a>2.1 按照承担任务划分</h3><p><strong>推理芯片</strong></p>
+<p>​        用于算法模型开发和训练。</p>
+<p><strong>训练芯片</strong></p>
+<p>​        用于应用层，利用训练好的模型，通过芯片计算“推理”出结果。</p>
+<h3 id="2-2-按照部署位置划分"><a href="#2-2-按照部署位置划分" class="headerlink" title="2.2 按照部署位置划分"></a>2.2 按照部署位置划分</h3><p><strong>云端芯片</strong></p>
+<p>​        部署在公有云、私有云或者混合云上，不但可用于训练，也可用于推理，算力强劲。</p>
+<p><strong>边缘端芯片</strong></p>
+<p>​        主要应用于嵌入式、移动终端等领域，此类芯片一般体积小、耗电低，性能要求也相对不高，一般只需具备一两种AI能力，用于推理。</p>
+<h2 id="3-ASIC"><a href="#3-ASIC" class="headerlink" title="3 ASIC"></a>3 ASIC</h2><p><a href="https://blog.csdn.net/qq_37719487/article/details/113325933">AI芯片：几种常见类型的AI芯片</a></p>
+<p><a href="https://blog.csdn.net/qq_37719487/article/details/113109669">AI芯片：指令集架构处理器Diannao分析</a></p>
+<p><a href="https://blog.csdn.net/qq_37719487/article/details/113649805">AI芯片论文：ASIC系列</a></p>
+]]></content>
+      <categories>
+        <category>IC</category>
+      </categories>
+      <tags>
+        <tag>ASIC</tag>
+        <tag>AI</tag>
+        <tag>IC</tag>
+        <tag>FPGA</tag>
+      </tags>
+  </entry>
 </search>
